@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+🎮 Arena – Plateforme du Défi Nuit de l’Info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Arena est une application web développée pour la Nuit de l’Info. Elle permet de gérer les équipes, leurs scores, les badges et le classement en temps réel. La plateforme propose un espace administrateur complet ainsi qu’une interface publique pour consulter le leaderboard.
 
-## Available Scripts
+🛠️ Fonctionnalités principales
 
-In the project directory, you can run:
+Gestion des équipes (ajout, mise à jour, suppression)
 
-### `npm start`
+Attribution de points selon les défis réalisés
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Système de badges et niveaux
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Classement dynamique et mis à jour en temps réel
 
-### `npm test`
+Historique complet des actions administratives
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Interface moderne et responsive
 
-### `npm run build`
+🔐 1️⃣ Espace Administrateur
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+L’administrateur accède à une interface sécurisée via une page de connexion dédiée. Une fois connecté, il arrive sur un tableau de bord centralisé regroupant les informations clés : nombre d’équipes, scores récents, tendances, badges attribués et actions récentes.
+Depuis ce tableau de bord, l’administrateur peut naviguer vers les pages de gestion pour administrer facilement l’ensemble du système sans quitter l’environnement protégé.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+👥 2️⃣ Gestion des équipes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+L’administrateur dispose d’une interface simple pour créer de nouvelles équipes, définir le nombre de membres, les niveaux atteints ou les défis réalisés.
+Il peut également mettre à jour à tout moment les informations d’une équipe, comme modifier son score, son nom ou l’avancement de ses défis.
+L’objectif est de permettre une gestion rapide afin de suivre la compétition sans interruption.
 
-### `npm run eject`
+🏆 3️⃣ Gestion des scores et défis
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+L’admin peut attribuer ou retirer des points à une équipe en quelques clics.
+Il sélectionne l’équipe, choisit le défi concerné, entre le nombre de points et peut ajouter un commentaire.
+Chaque action est automatiquement enregistrée dans l’historique, assurant une traçabilité complète et une transparence totale pour les organisateurs.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📊 4️⃣ Classement général (Leaderboard)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Le classement est accessible publiquement et se met à jour en temps réel.
+Chaque équipe y apparaît avec :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Son score total
 
-## Learn More
+Sa tendance (progression)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ses défis accomplis
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Son niveau
 
-### Code Splitting
+Ses badges
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Les équipes sont triées automatiquement selon leurs points, permettant aux participants comme aux organisateurs de suivre la compétition en direct.
 
-### Analyzing the Bundle Size
+📜 5️⃣ Historique des actions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Arena garde un journal complet de toutes les actions effectuées dans l’espace administrateur : ajouts de points, retraits, modifications d’équipe, badges attribués, etc.
+Cette section permet :
 
-### Making a Progressive Web App
+de vérifier la cohérence des scores,
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+de résoudre d’éventuels litiges,
 
-### Advanced Configuration
+d’assurer une transparence totale pendant la Nuit de l’Info.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+L’historique constitue un outil essentiel pour suivre la progression des équipes et conserver un fil clair de toutes les opérations.
+🚀 Lancement du projet
+Installation du backend
+cd backend
+npm install
+npm start
 
-### Deployment
+Installation du frontend
+cd frontend
+npm install
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Le frontend sera disponible sur http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le backend sur http://localhost:5000
