@@ -1,0 +1,464 @@
+.leaderboard-page {
+  background: linear-gradient(135deg, #0a0e2a 0%, #1a1a3e 100%);
+  min-height: 100vh;
+  color: #fff;
+  padding-bottom: 3rem; /* un peu d'air en bas */
+}
+
+/* Header */
+.leaderboard-header {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(45deg, #ffd700, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.live-badge {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Podium */
+.podium-row {
+  margin-top: 2rem;
+}
+
+.podium-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* 1ère place mise en avant */
+.podium-col:nth-child(2) .podium-card {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.podium-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.podium-col:nth-child(2) .podium-card:hover {
+  transform: translateY(-14px) scale(1.04);
+}
+
+.podium-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.podium-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.medal {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto 1rem;
+}
+
+/* Nom sur le podium : propre + pas de débordement */
+.team-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-score {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-trend .badge {
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Statistiques */
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Tableau */
+.table-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-dark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table-dark th {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table-warning {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.rank-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.rank-1 {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #000;
+}
+
+.rank-2 {
+  background: linear-gradient(45deg, #c0c0c0, #e0e0e0);
+  color: #000;
+}
+
+.rank-3 {
+  background: linear-gradient(45deg, #cd7f32, #e69c4d);
+  color: #000;
+}
+
+.rank-4, .rank-5, .rank-6, .rank-7, .rank-8, .rank-9, .rank-10 {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.team-avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.trend.up {
+  color: #4ecdc4;
+}
+
+.trend.down {
+  color: #ff6b6b;
+}
+
+.level-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level-bar {
+  width: 80px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+}
+
+.level-fill {
+  height: 100%;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  border-radius: 3px;
+}
+
+.challenges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.challenges .badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Feed en direct */
+.live-header {
+  border: none;
+}
+
+.live-icon {
+  margin-right: 0.5rem;
+}
+
+.live-feed-container {
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.live-feed-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.live-feed-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.live-feed-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.live-event {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.live-event:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.live-event.latest {
+  background: rgba(255, 107, 107, 0.1);
+  border-left: 3px solid #ff6b6b;
+}
+
+.event-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 40px;
+  text-align: center;
+}
+
+.event-content {
+  flex: 1;
+}
+
+.event-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.points-added, .badge-earned {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.event-details {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.event-time {
+  font-style: italic;
+}
+
+/* Message global */
+.global-message {
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .podium-row {
+    flex-direction: column;
+  }
+
+  .podium-col {
+    margin-bottom: 1rem;
+  }
+
+  .podium-card {
+    height: auto !important;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation d'entrée */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* On anime juste le container, pas chaque enfant pour éviter les bugs */
+.leaderboard-page {
+  animation: slideUp 0.5s ease;
+}
+
+/* Accessibilité */
+:focus {
+  outline: 2px solid #4ecdc4;
+  outline-offset: 2px;
+}
+
+/* Mode haute contraste */
+@media (prefers-contrast: high) {
+  .leaderboard-page {
+    background: #000;
+  }
+
+  .podium-card {
+    border: 2px solid #fff;
+  }
+
+  .table tbody tr {
+    border-bottom: 2px solid #fff;
+  }
+} /* 👈 on ferme bien le @media ici */
+
+
+/* Rendre le texte "muted" lisible sur fond sombre */
+.leaderboard-page .text-muted {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Bouton Admin dans le header */
+.admin-btn {
+  padding: 6px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.10);
+  color: white;
+  transition: 0.25s ease;
+  backdrop-filter: blur(5px);
+}
+
+.admin-btn:hover {
+  background: rgba(255,255,255,0.20);
+  border-color: #fff;
+  cursor: pointer;
+}
+
+

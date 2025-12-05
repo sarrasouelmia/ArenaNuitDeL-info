@@ -1,0 +1,148 @@
+.history-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Statistiques */
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Filtres */
+.form-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+/* Tableau */
+.table th {
+  background: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.table td {
+  vertical-align: middle;
+  padding: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Détails d'événement */
+.event-details {
+  max-width: 400px;
+}
+
+.event-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
+.event-message {
+  margin-top: 0.25rem;
+  font-style: italic;
+  color: #495057;
+}
+
+.event-description {
+  font-size: 0.85rem;
+}
+
+.event-time {
+  color: #6c757d;
+  font-size: 0.85rem;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35em 0.65em;
+}
+
+/* État vide */
+.empty-state-icon {
+  font-size: 3rem;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+/* Pagination */
+.pagination .btn {
+  min-width: 80px;
+}
+
+/* Alertes */
+.alert-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .event-main > * {
+    margin-bottom: 0.25rem;
+  }
+  
+  .table td, .table th {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .pagination .btn {
+    min-width: 60px;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.history-page > * {
+  animation: fadeIn 0.5s ease;
+}

@@ -1,0 +1,203 @@
+.score-management {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Séparateur */
+.separator {
+  position: relative;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.admin-login-btn {
+  border-radius: 999px;
+  padding: 0.25rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.admin-login-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.separator::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #dee2e6;
+}
+
+.separator-text {
+  background: white;
+  padding: 0 1rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Points rapides */
+.quick-points .btn {
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+.quick-points .btn:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* Historique */
+.history-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.history-list {
+  padding: 1rem;
+}
+
+.history-item {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.history-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.history-header {
+  margin-bottom: 0.5rem;
+}
+
+.history-team {
+  display: flex;
+  align-items: center;
+}
+
+.history-points {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.history-body {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 0.5rem;
+}
+
+.history-details {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+.history-comment {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+/* Points par équipe */
+.team-points-card {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-points-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.team-name {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Alertes */
+.alert-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Formulaire */
+.form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Boutons */
+.btn-success {
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-outline-secondary {
+  border: 2px solid #dee2e6;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .history-container {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-points-card {
+    margin-bottom: 1rem;
+  }
+  
+  .history-points {
+    font-size: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.score-management > * {
+  animation: fadeInUp 0.5s ease;
+}
